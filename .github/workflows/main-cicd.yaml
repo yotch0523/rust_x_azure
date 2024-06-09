@@ -14,7 +14,7 @@ env:
   AZURE_CONTAINER_REGISTRY: yotchcontainer
   CONTAINER_NAME: samplerustapp
   CONTAINER_APP_NAME: aca-rust
-  RESOURCE_GROUP: rg-coe
+  RESOURCE_GROUP: rg-rust-x-azure
 
 jobs:
   build:
