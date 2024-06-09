@@ -1,4 +1,5 @@
 use actix_web::{get, App, HttpServer, Responder};
+use std::net::Ipv4Addr;
 
 #[get("/")]
 async fn index() -> impl Responder {
@@ -10,7 +11,7 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new().service(index)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind((Ipv4Addr::UNSPECIFIED, 8080))?
     .run()
     .await
 }
